@@ -10,17 +10,17 @@ int main(void)
 	long int num1 = 1, num2 = 2, num3;
 	int count = 0;
 
-	printf("%d, ", num1);
-	printf("%d, ", num2);
+	printf("%ld, ", num1);
+	printf("%ld, ", num2);
 	count = 2;
 	while (count < 50)
 	{
 		num3 = num1 + num2;
 		count++;
 		if (count < 50)
-			printf("%d, ", num3);
+			printf("%ld, ", num3);
 		else
-			printf("%d", num3);
+			printf("%ld", num3);
 		num1 = num2;
 		num2 = num3;
 	}
