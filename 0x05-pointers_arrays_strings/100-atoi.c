@@ -11,13 +11,15 @@ int _atoi(char *s)
 	int sign = 1;
 	int i = 0; /* i:index */
 
-	if (s[0] == '-') /* update sign for negative numbers */
+	for (; !(s[i] >= '0' && s[i] <= '9') && s[i] != '\0'; i++)
 	{
-		sign = -1;
-		i++;
+		if (s[i] == '-')
+			sign = -1 * sign;
+		if (s[i] == '+')
+			sign = +1 * sign;
 	}
 
-	for (; '0' <= s[i] <= '9' && s[i] != '\0'; ++i)
+	for (; s[i] >= '0' && s[i] <= '9' && s[i] != '\0'; i++)
 		nb = nb * 10 + s[i] - '0';
 
 	return (sign * nb);
