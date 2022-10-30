@@ -17,10 +17,8 @@ int _atoi(char *s)
 		i++;
 	}
 
-	while (('0' <= s[i] <= '9)' && s[i] != '\0')
-	{
+	for (; '0' <= s[i] <= '9' && s[i] != '\0'; ++i)
 		nb = nb * 10 + s[i] - '0';
-		s++;
-	}
+
 	return (sign * nb);
 }
