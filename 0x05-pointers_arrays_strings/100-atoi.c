@@ -8,7 +8,7 @@
 int _atoi(char *s)
 {
 	int nb = 0;
-	int sign = -1;
+	int sign = 1;
 	int i = 0; /* i:index */
 
 	if (s[0] == '-') /* update sign for negative numbers */
