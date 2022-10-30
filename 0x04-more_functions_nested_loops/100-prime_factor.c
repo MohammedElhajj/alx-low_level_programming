@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -6,9 +7,9 @@
  */
 int main(void)
 {
-	long long int num = 612852475143;
-	long long int i = 2;
-	long long int max = 1;
+	long int num = 612852475143;
+	long int i = 2;
+	long int max = 1;
 
 	while (num != 0)
 	{
@@ -20,7 +21,7 @@ int main(void)
 			num = num / i;
 			if (num == 1)
 			{
-				printf("%lld\n", max);
+				printf("%ld\n", max);
 				break;
 			}
 		}
