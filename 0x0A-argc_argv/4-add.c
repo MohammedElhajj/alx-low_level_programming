@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -36,21 +37,18 @@ int main(int argc, char *argv[])
 	int j; /* Index for loop */
 	int sum = 0;
 
-	if (argc > 1)
+	for (j = 1; j < argc; j++)
 	{
-		for (j = 1; j < argc; j++)
-		{
 		/* Check if the string contains digits only */
-			if (check_str(argv[j]))
-				sum += atoi(argv[j]);
+		if (check_str(argv[j]))
+			sum += atoi(argv[j]);
 		/* In case the string contains symbols */
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+		else
+		{
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n". sum);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
