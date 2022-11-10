@@ -13,7 +13,8 @@
 int *array_range(int min, int max)
 {
 	int *a; /* A pointer to the newly created array */
-	int i, v = min;
+	int i; /* Index for the while loop */
+	int v = min;
 
 	/* Return NULL if min is grater than max or malloc fails */
 	if (min > max)
