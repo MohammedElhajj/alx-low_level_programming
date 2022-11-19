@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	calc = func(nm1, num2);
+	calc = func(num1, num2);
 	printf("%d\n", calc);
 
 	return (0);
