@@ -29,10 +29,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->next = NULL; /* Point to NULL */
 	temp = *head;
 
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = new;
+	if (temp == NULL)
+		*head = new;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+	}
 
-	*head = new;
 	return (*head);
 }
