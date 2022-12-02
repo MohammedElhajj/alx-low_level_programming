@@ -11,9 +11,9 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	if (index >= 0 && index <= 63)
 	{
-	/* Right shift n, index times then berform bitnwise AND */
+		/* Right shift n, index times then berform bitnwise AND */
 		return ((n >> index) & 1);
 	}
 	else
-		return (-1)
+		return (-1);
 }
