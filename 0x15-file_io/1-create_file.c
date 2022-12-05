@@ -23,6 +23,8 @@ int create_file(const char *filename, char *text_content)
 		for (text_len = 0; text_content[text_len]; text_len++)
 			;
 	}
+	else
+		text_content = "";
 
 	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	w = write(o, text_content, text_len);
