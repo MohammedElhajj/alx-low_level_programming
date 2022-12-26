@@ -19,7 +19,7 @@ int main(void)
 	srand(time(NULL));
 
 	i = 0;
-	while (i <= 264)
+	while (i <= 2645)
 	{
 		passwd = (rand() % 128);
 		i += passwd;
