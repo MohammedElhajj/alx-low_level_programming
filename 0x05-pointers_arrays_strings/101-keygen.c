@@ -23,6 +23,7 @@ int main(void)
 	{
 		passwd = (rand() % 128);
 		i += passwd;
+		printf("%c", passwd);
 	}
 
 	printf("%c", 2772 - i);
