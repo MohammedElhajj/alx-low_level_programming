@@ -10,22 +10,19 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0; /* length counter */
-	int j = 0; /* Index */
-
-	while (src[i])
-		i++;
+	int i = 0; /* Index */
 
 	/* Copy and replace n bytes from src string to the dest string */
-	while (src[j] && j < n)
+	while (src[i] && i < n)
 	{
-		dest[j] = src[j];
-		j++;
+		dest[i] = src[i];
+		i++;
 	}
 
-	for (j = i; j < n; j++)
+	while (i < n)
 	{
-		dest[j] = '\n';
+		dest[i] = '\n';
+		i++;
 	}
 
 	return (dest);
