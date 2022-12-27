@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int i = 0; /* length counter */
 	int j = 0; /* Index */
 
-	while (src[i])
+	while (src[j])
 		i++;
 
 	/* Copy and replace n bytes from src string to the dest string */
