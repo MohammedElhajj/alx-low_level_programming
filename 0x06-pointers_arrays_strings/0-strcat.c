@@ -23,7 +23,5 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 
-	/* Add a terminating null byte at the end of dest */
-	dest[i] = '\n';
 	return (dest);
 }
